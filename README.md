@@ -1,7 +1,7 @@
 # Tic Tac Toe
 
 Nama: [Jaffna Naufal Safaraz]
-NIM: [411550500003]
+NIM: [41155050240003]
 Mata kuliah: Pemrograman Mobile (Tugas Sesi #5)
 Program studi: Teknik Informatika, Universitas Langlangbuana
 
