@@ -59,7 +59,7 @@ Tic Tac Toe merupakan permainan tradisional untuk dua orang yang dimainkan di at
 
 ### Saat bermain
 
-![Saat bermain](screenshots/main.png)
+![Saat bermain](screenshots/main.JPEG)
 
 ### Hasil permainan
 
