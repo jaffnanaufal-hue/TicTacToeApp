@@ -1,56 +1,66 @@
-# Welcome to your Expo app 👋
+# Tic Tac Toe
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Nama: [Jaffna Naufal Safaraz]
+NIM: [411550500003]
+Mata kuliah: Pemrograman Mobile (Tugas Sesi #5)
+Program studi: Teknik Informatika, Universitas Langlangbuana
 
-## Get started
+## Deskripsi
 
-1. Install dependencies
+Tic Tac Toe merupakan permainan tradisional untuk dua orang yang dimainkan di atas papan berukuran 3x3. Para pemain secara bergantian mengisi kotak yang masih kosong dengan simbol X atau O. Siapa pun yang berhasil menyejajarkan tiga simbol yang sama dalam satu baris, kolom, atau diagonal akan dinyatakan menang. Apabila seluruh kotak telah terisi dan tidak ada satu pun garis yang terbentuk, hasilnya adalah seri. Aplikasi ini dikembangkan menggunakan React Native dan Expo sebagai bahan latihan pembuatan aplikasi mobile dalam mata kuliah Pemrograman Mobile.
 
+## Fitur
+
+- Papan permainan 3x3 yang dapat ditekan.
+- Dua pemain bermain bergantian dengan simbol X dan O.
+- Deteksi pemenang secara otomatis.
+- Deteksi hasil seri ketika semua kotak terisi tanpa pemenang.
+- Tombol untuk mengulang permainan dari awal.
+
+## Teknologi
+
+- React Native
+- Expo (dengan Expo Router untuk navigasi berbasis file)
+- TypeScript
+
+## Cara Menjalankan
+
+1. Pastikan Node.js sudah terpasang.
+2. Buka folder proyek di terminal, lalu install library:
    ```bash
    npm install
    ```
-
-2. Start the app
-
+3. Jalankan aplikasi di browser:
    ```bash
-   npx expo start
+   npx expo start --web
    ```
+   Atau jalankan dengan `npx expo start` lalu buka lewat Expo Go di HP.
 
-In the output, you'll find options to open the app in a
+## Cara Kerja
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. **Papan permainan.** Papan 3x3 disimpan sebagai daftar berisi 9 kotak. Setiap kotak berisi `X`, `O`, atau kosong.
+2. **Giliran pemain.** Aplikasi mencatat giliran saat ini. Setiap kali pemain menekan kotak yang masih kosong, simbol pemain tersebut diisikan, lalu giliran berpindah ke pemain lain.
+3. **Menentukan pemenang.** Setelah setiap langkah, aplikasi memeriksa delapan kemungkinan garis kemenangan: tiga baris, tiga kolom, dan dua diagonal. Jika ketiga kotak pada salah satu garis berisi simbol yang sama, pemain dengan simbol itu dinyatakan menang.
+4. **Hasil seri.** Jika semua kotak sudah terisi dan tidak ada garis kemenangan, permainan dinyatakan seri.
+5. **Mengulang permainan.** Tombol ulang mengosongkan semua kotak dan mengembalikan giliran ke pemain pertama.
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Struktur File
 
-## Get a fresh project
+- `src/app`: halaman dan logika utama aplikasi.
+- `assets`: gambar dan ikon aplikasi.
+- `app.json`: konfigurasi aplikasi Expo.
+- `package.json`: daftar library yang digunakan.
 
-When you're ready, run:
+## Screenshot
 
-```bash
-npm run reset-project
-```
+### Tampilan awal
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+![Tampilan awal](screenshots/awal.png)
 
-### Other setup steps
+### Saat bermain
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+![Saat bermain](screenshots/main.png)
 
-## Learn more
+### Hasil permainan
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+![Hasil permainan](screenshots/hasil.png)
